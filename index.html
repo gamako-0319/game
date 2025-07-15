@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#222" />
+  <title>PWAテトリス</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <h1>PWA版テトリス</h1>
+  <canvas id="board" width="240" height="400"></canvas>
+  <div id="info">
+    <p>スコア: <span id="score">0</span></p>
+    <button id="start">スタート</button>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('SW 登録成功:', reg.scope))
+          .catch(err => console.error('SW 登録失敗:', err));
+      });
+    }
+  </script>
+</body>
+</html>
 
