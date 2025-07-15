@@ -1,0 +1,28 @@
+body {
+  background: #111;
+  color: #eee;
+  font-family: sans-serif;
+  text-align: center;
+}
+canvas {
+  background: #222;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #444;
+}
+#info {
+  margin-top: 10px;
+}
+button {
+  padding: 0.5em 1em;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:disabled {
+  background: #555;
+  cursor: default;
+}
